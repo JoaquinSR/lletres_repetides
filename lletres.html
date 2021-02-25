@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <meta name="author" content="Joaquin Sanchez Rodriguez">
+    <meta name="description" content="lletres_repetides">
+    <title>lletres_repetides</title>
+</head>
+
+<body>
+    <script>
+
+        /* Exercici 1*/
+        var nom = ["J", "o", "a", "q", "u", "i", "n"];
+
+        for (var i = 0; i < nom.length; i++) {
+            console.log(nom[i]);
+        }
+        /* Exercici 2 */
+        var nom2 = ["J", "o", "a", "q", "u", "1", "n"];
+
+        for (var i = 0; i < nom2.length; i++) {
+            if (nom2[i] == "a" || nom2[i] == "e" || nom2[i] == "i" || nom2[i] == "o" || nom2[i] == "u") {
+                console.log("He trobat la VOCAL: " + nom2[i]);
+            } else if (nom2[i] == "0" || nom2[i] == "1" || nom2[i] == "2" || nom2[i] == "3" || nom2[i] == "4" || nom2[i] == "5" || nom2[i] == "6" || nom2[i] == "7" || nom2[i] == "8" || nom2[i] == "9") {
+                console.log("Els noms de persones no contenen el número: " + nom2[i]);
+            } else {
+                console.log("He trobat la CONSONANT: " + nom2[i]);
+            }
+
+        }
+        /*No reconeix mateix tipus correlatius ¿?
+        var nom2 = ["J", "o", "a", "q", "u", "1", "n"];
+        var voc = /[aeiou]/gi;
+        var con = /[bcdfghjkmnñpqrstvwxyz]/gi;
+        var num = /[0-9]/g;
+
+        for (var i = 0; i < nom2.length; i++) {
+            if (voc.test(nom2[i])){
+                console.log("He trobat la VOCAL: " + nom2[i]);
+            } else if (num.test(nom2[i])){
+                console.log("Els noms de persones no contenen el número: " + nom2[i]);
+            } else if (con.test(nom2[i])){
+                console.log("He trobat la CONSONANT: " + nom2[i]);
+            }
+        }*/
+
+        /* Exercici 3 */
+        var nomMap = new Map();
+
+        for (var i = 0; i < nom.length; i++) {
+            if (nomMap.has(nom[i])) {
+                nomMap.set(nom[i], nomMap.get(nom[i]) + 1);
+            } else {
+                nomMap.set(nom[i], 1);
+            }
+        }
+        console.log(nomMap);
+
+        /* Exercici 4 */
+        var cognom = ["S", "a", "n", "c", "h", "e", "z"];
+        var fullName = nom.concat(" ", cognom);
+
+        console.log(fullName);
+
+    </script>
+
+</body>
+
+</html>
